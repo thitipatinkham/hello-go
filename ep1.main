@@ -1,0 +1,26 @@
+package main
+
+import (
+	"fmt"
+
+	"github.com/thitipat-artisan/hello-go/said"
+)
+
+// User ...
+type User struct {
+	name string
+}
+
+// Say ...
+func (u User) say() {
+	fmt.Printf("%+v", u)
+}
+
+// Set ...
+func (u *User) Set(name string) {
+	u.name = name
+}
+
+func main() {
+	fmt.Print(said.Say())
+}
